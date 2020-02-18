@@ -1,6 +1,9 @@
 <template>
     <nav>
      <v-toolbar dark flat >
+         <v-btn fab @click="()=>openCloseDrawer()">
+             <v-icon>menu</v-icon>
+         </v-btn>
          <v-toolbar-title class="text-uppercase">
              <span class="font-weight-light">Hasi</span>
              <span>Apps</span>
@@ -14,14 +17,28 @@
      </v-btn>
      </v-toolbar>
      
-     <h1>Hello World</h1>
+     <v-navigation-drawer  app class="success" v-model="drawer">
+         <List />
+     </v-navigation-drawer>
     </nav>
 </template>
 <style>
 </style>
 <script>
+    import List from './06.Lists'
+
     export default {
         name: "ToolBars",
-        data: ()=> ({})
+        data: ()=> ({
+            drawer: false
+        }),
+        components: {
+            List
+        },
+        methods: {
+            openCloseDrawer (){
+                this.drawer = !this.drawer
+            }
+        },
     }
 </script>
