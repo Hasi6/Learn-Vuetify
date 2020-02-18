@@ -1,7 +1,7 @@
 <template>
     <nav>
      <v-toolbar dark flat >
-         <v-btn fab @click="()=>openCloseDrawer()">
+         <v-btn fab depressed @click="()=>openCloseDrawer()">
              <v-icon>menu</v-icon>
          </v-btn>
          <v-toolbar-title class="text-uppercase">
