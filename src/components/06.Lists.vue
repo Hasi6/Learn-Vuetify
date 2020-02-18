@@ -1,9 +1,9 @@
 <template>
     <div>
         <v-list>
-        <v-list-item v-for="(da, index) in datas " :key="index">
+        <v-list-item v-for="(da, index) in datas " :key="index" router :to="da.route">
             <v-list-item-action>
-                <v-icon v-bind:class="`${color}--text`">{{da.icon}}</v-icon>
+                <v-icon :class="`${color}--text`">{{da.icon}}</v-icon>
             </v-list-item-action>
             <v-list-item-content>
                 <v-list-item-title class="white--text">
@@ -28,11 +28,11 @@
             },{
                 name: 'My Projects',
                 icon: 'folder',
-                route: '/'
+                route: '/projects'
             },{
                 name: 'Team',
                 icon: 'person',
-                route: '/'
+                route: '/team'
             }]
         })
     }
