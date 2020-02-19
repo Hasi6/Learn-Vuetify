@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content >
+    <v-content>
       <ToolBar />
       <div class="mx-4 mb-4">
       <router-view></router-view>
